@@ -1,0 +1,53 @@
+{
+  "name": "Cloud Comments for Github",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Comment everywhere with programmers around the world.",
+  "homepage_url": "",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+	  "js/jquery/jquery.js",
+	  "js/leancloud/av-min.js",
+	  "js/leancloud/realtime.browser.min.js",
+	  "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "options_page": "src/options_custom/index.html",
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Sign up now to start writing comments",
+    "default_popup": "src/page_action/page_action.html"
+  },
+  "permissions": [
+    "https://github.com/*",
+	"tabs",
+	"storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js",
+		"js/jquery/jquery.js",
+		"js/leancloud/av-min.js"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<style type="text/css">
+	#mainPopup {
+		padding: 10px;
+		height: 200px;
+		width: 400px;
+		font-family: Helvetica, Ubuntu, Arial, sans-serif;
+	}
+	h1 {
+		font-size: 2em;
+	}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../../js/bootstrap/css/bootstrap.css" />
+
+<script src="../../js/jquery/jquery.js"></script>
+<script src="../../src/page_action/page_action.js"></script>
+<script src="../../js/bootstrap/js/bootstrap.js"></script>
+
+<div id="mainPopup">
+	<form id="target" role="form">
+		<div class="form-group">
+			<label><b>Username: </b></label>
+			<input type="text" id="username" class="form-control" placeholder="" required>
+		</div>
+		<div class="form-group">
+			<label><b>Password: </b></label>
+			<input type="password" id="password" class="form-control" placeholder="" required>
+		</div>
+		<div class="form-group">
+			<input type="submit" class="form-group btn btn-success" value="Submit">
+			<p id="errormsg" class="form-group"></p>
+		</div>
+	</form>
+	<div id="welcome">
+		<h1 id="title"></h1>
+		<button type="button" id="logout" class="btn btn-danger">Logout</button>
+		<p id="errormsgw"></p>
+	</div>
+</div>
